@@ -9,3 +9,5 @@ const ContactPage = () => (
     </p>
   </main>
 )
+
+export default ContactPage
