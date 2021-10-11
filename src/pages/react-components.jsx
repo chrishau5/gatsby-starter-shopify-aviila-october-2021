@@ -2,8 +2,14 @@ import * as React from "react"
 import { graphql } from "gatsby"
 import { Layout } from "../components/layout"
 import { ProductListing } from "../components/product-listing"
-import { container, intro } from "./index.module.css"
-import { Link } from "gatsby"
+import {
+  container,
+  intro,
+  callOut,
+  callToAction,
+  deployButton,
+} from "./index.module.css"
+import { LoginForm } from "../components/A-CSS-for-JS/loginForm"
 
 export const query = graphql`
   query {
@@ -17,23 +23,26 @@ export const query = graphql`
 function Hero(props) {
   return (
     <div className={container}>
-      <h1 className={intro}>Welcome to the GatsbyJS + Shopify Demo Store.</h1>
+      <h1 className={intro}>This is the AVIILA Code Playground</h1>
       <ul>
         <li>
-          <Link to="/react-components">React Components</Link>
-        </li>
-        <li>
-          <Link to="/contact">Contact</Link>
+          <a href="/">Home</a>
         </li>
       </ul>
     </div>
   )
 }
 
-export default function IndexPage({ data }) {
+export default function ReactComponents({ data }) {
   return (
     <Layout>
       <Hero />
+      <LoginForm
+        handleSubmit={(ev) => {
+          ev.preventDefault()
+          alert("Submitted!")
+        }}
+      />
       <ProductListing products={data?.shopifyCollection?.products} />
     </Layout>
   )

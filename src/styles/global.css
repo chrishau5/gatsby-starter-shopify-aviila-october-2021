@@ -1,6 +1,7 @@
+html,
 body {
-  font-family: var(--font-body);
-  color: var(--text-color);
+  height: 100%;
+  text-rendering: optimizeSpeed;
 }
 
 .gatsby-image-wrapper {
@@ -9,4 +10,129 @@ body {
 
 .gatsby-image-wrapper [data-main-image] {
   border-radius: var(--radius-sm);
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* My Global Styles - Sourced from joshwcomeau  */
+/* https://courses.joshwcomeau.com/css-for-js/03-components/07-global-styles */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  line-height: 1.45;
+  -webkit-font-soothing: antialiased;
+  -moz-osx-font-smoothing: auto;
+}
+
+html {
+  isolation: isolate;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: var(--color-background);
+}
+
+a:focus {
+  outline: 5px auto var(--color-primary);
+}
+
+body,
+input,
+button,
+select,
+option {
+  font-family: var(--font-body);
+}
+
+p {
+  margin-bottom: 1.5em;
+  font-size: 1.125rem;
+  color: var(--color-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-header);
+  color: var(--light-fade-80);
+}
+
+h1 {
+  font-size: var(--text-h1);
+}
+
+h2 {
+  font-size: var(--text-h2);
+}
+
+h3 {
+  font-size: var(--text-h3);
+}
+
+h4 {
+  font-size: var(--text-h4);
+}
+
+h5 {
+  font-size: var(--text-h5);
+}
+
+h6 {
+  font-size: var(--text-h6);
+}
+
+/* Scrollbar and selection styles */
+selection {
+  background-color: var(--color-primary);
+  color: var(--light);
+}
+
+@media (orientation: landscape) {
+  ::-webkit-scrollbar {
+    width: 9px;
+    height: 11px;
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar-track {
+    border-radius: 3px;
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--color-gray-300);
+    border: 2px solid var(--color-background);
+  }
+}
+
+/* Third-party overrides */
+.video-js .vjs-big-play-button {
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  margin: auto !important;
+  border: 1px solid var(--light-fade-25) !important;
+  background-color: var(0, 0, 0, 0.4) !important;
+}
+
+.video-js.vjs-play-progress:before {
+  top: -0.6em !important;
+}
+
+vjs-slider-horizontal .vjs-volume-level:before {
+  top: -0.6em !important;
 }

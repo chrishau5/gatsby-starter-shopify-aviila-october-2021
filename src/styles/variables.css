@@ -1,17 +1,63 @@
 :root {
   /* tokens */
   /* font-family */
-  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-body: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+
+  --font-header: Ailerons, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
 
   /* palette */
+  --dark: hsla(240, 8%, 5%, 1);
+  --dark-90: hsla(240, 8%, 5%, 0.9);
+  --dark-80: hsla(240, 8%, 5%, 0.8);
+  --dark-50: hsla(240, 8%, 5%, 0.5);
+
   --black-fade-5: rgba(0, 0, 0, 0.05);
   --black-fade-40: rgba(0, 0, 0, 0.4);
   --grey-90: #232129;
   --grey-50: #78757a;
-  --green-80: #088413;
+
+  /* AVIILA color palette */
+  --green: hsla(69, 100%, 76%, 1);
+  --turquoise: hsla(180, 100%, 74%, 1);
+  --pink: hsla(307, 100%, 77%, 1);
+  --red: hsla(352, 100%, 71%, 1);
+  --red-31: hsla(352, 100%, 71%, 0.318);
+
   --green-50-rgb: 55, 182, 53;
   --white: #ffffff;
+  --light: hsla(0, 38%, 94%, 1);
+  --light-fade-90: hsla(0, 38%, 94%, 0.9);
+  --light-fade-80: hsla(0, 38%, 94%, 0.8);
+  --light-fade-25: hsla(0, 38%, 94%, 0.25);
+
+  --color-gray-100: hsl(240deg, 15%, 20%);
+  --color-gray-200: hsl(240deg, 15%, 25%);
+  --color-gray-300: hsl(240deg, 10%, 40%);
+  --color-gray-400: hsl(240deg, 9%, 45%);
+  --color-gray-500: hsl(240deg, 8%, 50%);
+  --color-gray-600: hsl(240deg, 12%, 55%);
+  --color-gray-700: hsl(240deg, 14%, 66%);
+  --color-gray-900: hsl(240deg, 25%, 88%);
+  --color-gray-1000: hsl(240deg, 25%, 96%);
+
+  /* colors */
+  --color-primary: var(--green);
+  --color-background: var(--dark);
+  --border: var(--black-fade-5);
+  --button: var(--green);
+
+  /* text */
+  /* color */
+  --color-text: var(--light);
+  --color-text-secondary: var(--light-80);
+  --color-text-inverted: var(--dark);
+  /* size */
+  --text-display: var(--text-2xl);
+  --text-prose: var(--text-md);
 
   /* radii */
   --radius-sm: 4px;
@@ -43,35 +89,20 @@
   --bold: 700;
 
   /* font-size */
-  --text-xs: 12px;
-  --text-sm: 14px;
-  --text-md: 16px;
-  --text-lg: 18px;
-  --text-xl: 20px;
-  --text-2xl: 24px;
-  --text-3xl: 32px;
+  --text-h1: 5.61rem;
+  --text-h2: 4.209rem;
+  --text-h3: 3.157rem;
+  --text-h4: 2.639rem;
+  --text-h5: 1.777rem;
+  --text-h6: 1.333rem;
 
   /* role-based tokens */
-
-  /* colors */
-  --primary: var(--green-80);
-  --background: var(--white);
-  --border: var(--black-fade-5);
 
   /* transitions */
   --transition: box-shadow 0.125s ease-in;
 
   /* shadows */
   --shadow: 0 4px 12px rgba(var(--green-50-rgb), 0.5);
-
-  /* text */
-  /* color */
-  --text-color: var(--grey-90);
-  --text-color-secondary: var(--grey-50);
-  --text-color-inverted: var(--white);
-  /* size */
-  --text-display: var(--text-2xl);
-  --text-prose: var(--text-md);
 
   /* input */
   --input-background: var(--black-fade-5);
