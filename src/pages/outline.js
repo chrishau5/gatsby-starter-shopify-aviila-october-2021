@@ -178,8 +178,21 @@ const VideoPage = styled.section`
 `
 
 const SideLogoWrapper = styled.div`
-  min-height: 100%;
+  /* height: 100%; */
   color: var(--light-fade-80);
+`
+
+const SideLogo = styled.div`
+  position: fixed;
+  writing-mode: vertical-rl;
+  top: 17%;
+  right: 0;
+  transform: rotate(180deg);
+  font-size: 4rem;
+  letter-spacing: 0.32em;
+  text-align: center;
+  line-height: 100%;
+  font-family: var(--font-header);
 `
 
 const DayPage = styled.section`
@@ -195,19 +208,6 @@ const DayPage = styled.section`
   margin-top: 261.8px;
   padding-left: 100px;
   padding-right: 100px;
-`
-
-const SideLogo = styled.div`
-  position: fixed;
-  writing-mode: vertical-rl;
-  right: 0;
-  top: 34vh;
-  transform: rotate(180deg);
-  font-size: 4rem;
-  letter-spacing: 0.32em;
-  text-align: center;
-  line-height: 100%;
-  font-family: var(--font-header);
 `
 
 const DayWrapper = styled.section`
