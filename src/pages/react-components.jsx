@@ -37,12 +37,16 @@ export default function ReactComponents({ data }) {
   return (
     <Layout>
       <Hero />
-      <LoginForm
-        handleSubmit={(ev) => {
-          ev.preventDefault()
-          alert("Submitted!")
-        }}
-      />
+      <div className={container}>
+        <LoginForm
+          handleSubmit={(ev) => {
+            ev.preventDefault()
+            alert("Submitted!")
+          }}
+        />
+      </div>
+      <div className={container}>This will be where the breadcrumbs go!</div>
+
       <ProductListing products={data?.shopifyCollection?.products} />
     </Layout>
   )

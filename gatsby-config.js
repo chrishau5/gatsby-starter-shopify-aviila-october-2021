@@ -2,14 +2,14 @@ require("dotenv").config()
 
 module.exports = {
   siteMetadata: {
-    siteTitle: "gatsby-starter-shopify",
-    siteTitleDefault: "gatsby-starter-shopify by @GatsbyJS",
-    siteUrl: "https://shopify-demo.gatsbyjs.com",
+    siteTitle: "AVIILA - Men's Activewear",
+    siteTitleDefault: "AVIILA - Men's Activewear",
+    siteUrl: "https://aviila.com",
     hrefLang: "en",
     siteDescription:
-      "A Gatsby starter using the latest Shopify plugin showcasing a store with product overview, individual product pages, and a cart.",
-    siteImage: "/default-og-image.jpg",
-    twitter: "@gatsbyjs",
+      "AVIILA is a premium men's activewear clothing company headquartered in Miami, FL.",
+    siteImage: "/static/images/logos/AVIILA-4.png",
+    twitter: "@aviila_apparel",
   },
   flags: {
     FAST_DEV: true,
