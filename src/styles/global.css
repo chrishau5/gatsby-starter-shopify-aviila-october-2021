@@ -29,7 +29,7 @@ html:focus-within {
 *:before,
 *:after {
   box-sizing: border-box;
-  line-height: 1.45;
+  line-height: 1.618;
   -webkit-font-soothing: antialiased;
   -moz-osx-font-smoothing: auto;
 }

@@ -145,7 +145,7 @@ const IntroPage = styled.section`
   min-height: 100%;
   position: relative;
   width: 100%;
-  padding-top: 221px;
+  padding-top: 235px;
   padding-right: 100px;
   padding-bottom: 423.6px;
   padding-left: 100px;
@@ -155,14 +155,14 @@ const ContentWrapper = styled.article`
   max-width: 600px;
 `
 
-const Title = styled.h2`
+const Title = styled.h1`
   line-height: 0.8;
   font-weight: var(--medium);
   max-width: 550px;
   margin-left: -15px;
 `
 const Subtitle = styled.span`
-  font-size: var(--text-h3);
+  font-size: var(--text-h2);
   line-height: 0.6;
   word-spacing: -0.2em;
   margin-left: 6px;
