@@ -2,7 +2,11 @@ import * as React from "react"
 import { Link } from "gatsby"
 
 const Breadcrumbs = () => {
-  return "TODO"
+  return (
+    <nav aria-label="Breadcrumb">
+      <ol>{children}</ol>
+    </nav>
+  )
 }
 
 const Crumb = () => {

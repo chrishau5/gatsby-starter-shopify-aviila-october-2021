@@ -3,10 +3,10 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import { menuData } from "../data/menuData"
 import { H4 } from "../../styles/TextStyles"
-import MenuButton from "../buttons/MenuButton"
 import MenuTooltip from "../tooltips/MenuTooltip"
-import MenuIconButton from "../buttons/MenuIconButton"
 import { StoreContext } from "../context/StoreContext"
+import MenuButton from "../Buttons/MenuButton.js"
+import MenuIconButton from "../Buttons/MenuIconButton.js"
 
 const menuIconData = [
   {
