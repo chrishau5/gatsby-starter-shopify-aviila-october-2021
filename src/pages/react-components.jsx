@@ -10,6 +10,7 @@ import {
   deployButton,
 } from "./index.module.css"
 import { LoginForm } from "../components/A-CSS-for-JS/loginForm"
+import { BreadcrumbComponent } from "../components/A-CSS-for-JS/breadcrumbs"
 
 export const query = graphql`
   query {
@@ -45,7 +46,9 @@ export default function ReactComponents({ data }) {
           }}
         />
       </div>
-      <div className={container}>This will be where the breadcrumbs go!</div>
+      <div className={container}>
+        <BreadcrumbComponent />
+      </div>
 
       <ProductListing products={data?.shopifyCollection?.products} />
     </Layout>

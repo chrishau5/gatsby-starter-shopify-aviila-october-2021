@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
-const Breadcrumbs = () => {
+const Breadcrumbs = ({ children }) => {
   return (
     <nav aria-label="Breadcrumb">
       <ol>{children}</ol>
@@ -9,16 +9,23 @@ const Breadcrumbs = () => {
   )
 }
 
-const Crumb = () => {
-  return "TODO"
+const Crumb = ({ to, children }) => {
+  return (
+    <li>
+      <Link to={to}>{children}</Link>
+    </li>
+  )
 }
 
-render(
-  <Breadcrumbs>
-    <Crumb>
-      <Link to="" />
-    </Crumb>
-  </Breadcrumbs>
-)
-
-export default Breadcrumbs
+export function BreadcrumbComponent() {
+  return (
+    <Breadcrumbs>
+      <Crumb>
+        <Link to="/">Home</Link>
+      </Crumb>
+      <Crumb>
+        <Link to="/about">About Us</Link>
+      </Crumb>
+    </Breadcrumbs>
+  )
+}

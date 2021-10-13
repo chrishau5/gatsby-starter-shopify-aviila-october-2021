@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import Layout from "../components/layout/layout"
+import Layout from "../components/AVIILA/layout/layout"
 
 const OutlinePage = () => (
   <Layout>

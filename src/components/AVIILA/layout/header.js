@@ -1,12 +1,12 @@
 import React, { useState, useContext } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import { menuData } from "../data/menuData"
-import { H4 } from "../../styles/TextStyles"
-import MenuTooltip from "../tooltips/MenuTooltip"
-import { StoreContext } from "../context/StoreContext"
-import MenuButton from "../Buttons/MenuButton.js"
-import MenuIconButton from "../Buttons/MenuIconButton.js"
+import { menuData } from "../../data/menuData"
+import { H4 } from "../../../styles/TextStyles"
+import MenuTooltip from "../../tooltips/MenuTooltip"
+import { StoreContext } from "../../context/StoreContext"
+import MenuButton from "../../Buttons/MenuButton.js"
+import MenuIconButton from "../../Buttons/MenuIconButton.js"
 
 const menuIconData = [
   {
