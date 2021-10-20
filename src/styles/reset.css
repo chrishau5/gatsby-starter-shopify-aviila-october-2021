@@ -203,17 +203,8 @@ textarea {
   line-height: inherit;
   color: inherit;
 }
+
 img,
-svg,
-video,
-canvas,
-audio,
-iframe,
-embed,
-object {
-  display: block;
-}
-/* img, */
 video {
   max-width: 100%;
   height: auto;

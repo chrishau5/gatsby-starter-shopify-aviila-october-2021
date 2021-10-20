@@ -34,8 +34,16 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: ["Montserrat"],
+        fonts: ["Montserrat", "Space Mono"],
         display: "swap",
+      },
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /src\/images\/svg/,
+        },
       },
     },
     "gatsby-plugin-image",

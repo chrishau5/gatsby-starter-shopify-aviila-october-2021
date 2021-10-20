@@ -2,8 +2,12 @@ import * as React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/AVIILA/layout/layout"
+import HandSelected from "../images/fabric.jpeg"
+import Design from "../images/thoughtful-design.jpg"
+import Manufacturing from "../images/cutting-edge-manufacturing.jpg"
+import FrontCube from "../images/svg/LargeCube2.svg"
 
-const OutlinePage = () => (
+const OutlinePage = ({ data }) => (
   <Layout>
     <main>
       <PageWrapper>
@@ -42,7 +46,10 @@ const OutlinePage = () => (
         </IntroPage>
         <VideoPage>
           <section className="video-wrapper">
-            <p>Video Placeholder</p>
+            <ImgTest>
+              <FrontCube />
+              <ImgText>Please work</ImgText>
+            </ImgTest>
           </section>
         </VideoPage>
         <DayPage className="day-night-page">
@@ -120,24 +127,76 @@ const OutlinePage = () => (
             </Paragraph>
           </ContentWrapper>
           <DayWrapper>
-            <Card>
-              <h6>Hand Selected Fabrics</h6>
-              <p></p>
-            </Card>
-            <Card>
-              <h6>Thoughtful Design</h6>
-              <p></p>
-            </Card>
-            <Card>
-              <h6>Cutting-Edge Manufacturing</h6>
-              <p></p>
-            </Card>
+            <FinestCard>
+              <ImageWrapper>
+                <img
+                  src={HandSelected}
+                  alt="Hand-Selected Fabric"
+                  style={{
+                    objectFit: "cover",
+                    height: "270px",
+                    borderRadius: "6px 6px 0 0",
+                  }}
+                />
+              </ImageWrapper>
+              <FinestBottom>
+                <h5>Hand Selected Fabrics</h5>
+              </FinestBottom>
+            </FinestCard>
+            <FinestCard>
+              <ImageWrapper>
+                <img
+                  src={Design}
+                  alt="Thoughtful Design"
+                  style={{
+                    objectFit: "cover",
+                    borderRadius: "6px 6px 0 0",
+                    objectPosition: "center -70px",
+                  }}
+                />
+              </ImageWrapper>
+              <FinestBottom>
+                <h5>Thoughtful Design</h5>
+              </FinestBottom>
+            </FinestCard>
+            <FinestCard>
+              <ImageWrapper>
+                <img
+                  src={Manufacturing}
+                  alt="Cutting Edge Manufacturing"
+                  style={{
+                    objectFit: "cover",
+                    borderRadius: "6px 6px 0 0",
+                    objectPosition: "center -55px",
+                  }}
+                />
+              </ImageWrapper>
+              <FinestBottom>
+                <h5>Cutting-Edge Manufacturing</h5>
+              </FinestBottom>
+            </FinestCard>
           </DayWrapper>
         </FinestPage>
       </PageWrapper>
     </main>
   </Layout>
 )
+
+const ImgTest = styled.div`
+  display: flex;
+  height: 576px;
+  width: 576px;
+  z-index: 1;
+`
+
+const ImgText = styled.h6`
+  height: 576px;
+  width: 576px;
+  margin-left: -100%;
+  margin-top: 48%;
+  text-align: center;
+  z-index: 2;
+`
 
 const PageWrapper = styled.div``
 
@@ -174,7 +233,7 @@ const Paragraph = styled.p`
 const VideoPage = styled.section`
   height: 40vh;
   border: 4px dotted var(--red);
-  background: var(--red-31);
+  /* background: var(--red-31); */
 `
 
 const DayPage = styled.section`
@@ -225,6 +284,40 @@ const FinestPage = styled.section`
   margin-top: 261.8px;
   padding-left: 100px;
   padding-right: 100px;
+`
+const FinestCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  max-height: 436px;
+  max-width: 272px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  box-shadow: inset -4px -4px 12.5px rgba(47, 47, 55, 0.6);
+  filter: drop-shadow(4px 4px 12.5px rgba(12, 12, 14, 0.9));
+`
+
+const ImageWrapper = styled.div`
+  height: 270px;
+  width: 270px;
+`
+
+const FinestBottom = styled.article`
+  width: 100%;
+  height: 166px;
+  background-color: #484868;
+  letter-spacing: -0.125em;
+  line-height: -0.1;
+  font-weight: var(--semibold);
+  padding-left: 24px;
+  padding-right: 24px;
+  text-align: left;
+  padding-top: 41px;
+  border-radius: 0 0 6px 6px;
 `
 
 const Social = styled.ul`
