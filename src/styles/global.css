@@ -42,6 +42,7 @@ body {
   font-family: "Overpass", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: var(--color-text);
   background: var(--color-background);
+  line-height: 1.618;
 }
 
 a:focus {
@@ -58,7 +59,7 @@ option {
 
 p {
   margin-bottom: 1.5em;
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: var(--color-text);
   line-height: 1.618;
 }
@@ -77,8 +78,20 @@ h1 {
   font-size: var(--text-h1);
 }
 
+@media (max-width: 550px) {
+  h1 {
+    font-size: 3.157rem;
+  }
+}
+
 h2 {
   font-size: var(--text-h2);
+}
+
+@media (max-width: 550px) {
+  h2 {
+    font-size: 1.777rem;
+  }
 }
 
 h3 {

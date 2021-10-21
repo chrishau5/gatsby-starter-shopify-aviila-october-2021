@@ -46,10 +46,10 @@ const OutlinePage = ({ data }) => (
         </IntroPage>
         <VideoPage>
           <section className="video-wrapper">
-            <ImgTest>
+            {/* <ImgTest>
               <FrontCube />
               <ImgText>Please work</ImgText>
-            </ImgTest>
+            </ImgTest> */}
           </section>
         </VideoPage>
         <DayPage className="day-night-page">
@@ -182,21 +182,22 @@ const OutlinePage = ({ data }) => (
   </Layout>
 )
 
-const ImgTest = styled.div`
-  display: flex;
-  height: 576px;
-  width: 576px;
-  z-index: 1;
-`
+// This is a part of the cube component trying to work it out from figma 10/21/2021
+// const ImgTest = styled.div`
+//   display: flex;
+//   height: 576px;
+//   width: 576px;
+//   z-index: 1;
+// `
 
-const ImgText = styled.h6`
-  height: 576px;
-  width: 576px;
-  margin-left: -100%;
-  margin-top: 48%;
-  text-align: center;
-  z-index: 2;
-`
+// const ImgText = styled.h6`
+//   height: 576px;
+//   width: 576px;
+//   margin-left: -100%;
+//   margin-top: 48%;
+//   text-align: center;
+//   z-index: 2;
+// `
 
 const PageWrapper = styled.div``
 
@@ -208,6 +209,14 @@ const IntroPage = styled.section`
   padding-right: 100px;
   padding-bottom: 423.6px;
   padding-left: 100px;
+
+  @media (max-width: 550px) {
+    padding-top: 150px;
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-bottom: 200px;
+    margin: 0px;
+  }
 `
 
 const ContentWrapper = styled.article`
@@ -219,16 +228,26 @@ const Title = styled.h1`
   font-weight: var(--medium);
   max-width: 550px;
   margin-left: -15px;
+
+  @media (max-width: 550px) {
+    line-height: 1;
+    margin: 0px;
+    padding-bottom: 24px;
+  }
 `
 const Subtitle = styled.span`
-  font-size: var(--text-h2);
+  font-size: var(--text-h2-mobile);
   line-height: 0.6;
   word-spacing: -0.2em;
   margin-left: 6px;
+
+  @media (max-width: 550px) {
+    margin: 0px;
+  }
 `
 
 const Paragraph = styled.p`
-  margin: 35px 0;
+  padding-bottom: 35px;
 `
 const VideoPage = styled.section`
   height: 40vh;

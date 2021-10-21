@@ -97,7 +97,7 @@
   --text-h6: 1.333rem;
 
   /* role-based tokens */
-
+  --text-h2-mobile: 2.639rem;
   /* transitions */
   --transition: box-shadow 0.125s ease-in;
 
