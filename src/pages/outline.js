@@ -268,6 +268,14 @@ const DayPage = styled.section`
   margin-top: 261.8px;
   padding-left: 100px;
   padding-right: 100px;
+
+  @media (max-width: 550px) {
+    padding-top: 150px;
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-bottom: 200px;
+    margin: 0px;
+  }
 `
 
 const DayWrapper = styled.section`
@@ -303,6 +311,14 @@ const FinestPage = styled.section`
   margin-top: 261.8px;
   padding-left: 100px;
   padding-right: 100px;
+
+  @media (max-width: 550px) {
+    padding-top: 150px;
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-bottom: 200px;
+    margin: 0px;
+  }
 `
 const FinestCard = styled.div`
   display: flex;
