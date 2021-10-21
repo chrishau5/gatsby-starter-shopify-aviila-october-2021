@@ -7,7 +7,7 @@ module.exports = {
     siteUrl: "https://aviila.com",
     hrefLang: "en",
     siteDescription:
-      "AVIILA is a premium men's activewear clothing company headquartered in Miami, FL.",
+      "AVIILA is a Miami-based premium men's activewear clothing company.",
     siteImage: "/static/images/logos/AVIILA-4.png",
     twitter: "@aviila_apparel",
   },
@@ -15,6 +15,18 @@ module.exports = {
     FAST_DEV: true,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `AVIILA | Miami-Based Men's Activewear`,
+        short_name: `AVIILA`,
+        start_url: `/outline`,
+        background_color: `#0C0C0E`,
+        theme_color: `#0C0C0E`,
+        display: `standalone`,
+        icon: `src/images/aviila_icon.svg`, // This path is relative to the root of the site.
+      },
+    },
     {
       resolve: "gatsby-source-shopify",
       options: {
@@ -29,13 +41,6 @@ module.exports = {
         spaceId: `bv5d69d22y29`,
         // Learn about environment variables: https://gatsby.dev/env-vars
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: ["Montserrat", "Space Mono"],
-        display: "swap",
       },
     },
     {
