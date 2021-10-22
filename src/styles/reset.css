@@ -1,3 +1,8 @@
+html,
+body {
+  height: 100%;
+}
+
 html {
   -webkit-text-size-adjust: 100%;
   font-family: system-ui, sans-serif;
@@ -7,7 +12,6 @@ html {
   touch-action: manipulation;
 }
 body {
-  height: 100%;
   font-feature-settings: "kern";
 }
 *,
@@ -204,8 +208,7 @@ textarea {
   color: inherit;
 }
 
-img,
-video {
+img {
   max-width: 100%;
   height: auto;
 }

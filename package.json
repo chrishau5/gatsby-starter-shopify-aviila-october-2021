@@ -54,6 +54,7 @@
     "urql": "^2.0.2"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "^1.13.2"
+    "babel-plugin-styled-components": "^1.13.2",
+    "video.js": "^7.15.4"
   }
 }

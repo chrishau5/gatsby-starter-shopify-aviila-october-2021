@@ -6,11 +6,24 @@ import HandSelected from "../images/fabric.jpeg"
 import Design from "../images/thoughtful-design.jpg"
 import Manufacturing from "../images/cutting-edge-manufacturing.jpg"
 import FrontCube from "../images/svg/LargeCube2.svg"
+import MiamiHero from "../videos/miami_hero.mp4"
 
 const OutlinePage = ({ data }) => (
   <Layout>
     <main>
       <PageWrapper>
+        <VideoPage>
+          <section className="video-wrapper">
+            {/* <ImgTest>
+              <FrontCube />
+              <ImgText>Please work</ImgText>
+            </ImgTest> */}
+            <Video autoPlay muted loop playsInline>
+              <source src={MiamiHero} type="video/mp4" />
+            </Video>
+            <Overlay />
+          </section>
+        </VideoPage>
         <IntroPage>
           <ContentWrapper>
             <Title>
@@ -44,14 +57,6 @@ const OutlinePage = ({ data }) => (
             </li>
           </Social>
         </IntroPage>
-        <VideoPage>
-          <section className="video-wrapper">
-            {/* <ImgTest>
-              <FrontCube />
-              <ImgText>Please work</ImgText>
-            </ImgTest> */}
-          </section>
-        </VideoPage>
         <DayPage className="day-night-page">
           <ContentWrapper>
             <Title>
@@ -199,7 +204,45 @@ const OutlinePage = ({ data }) => (
 //   z-index: 2;
 // `
 
-const PageWrapper = styled.div``
+const PageWrapper = styled.div`
+  height: 100%;
+`
+
+const VideoPage = styled.section`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+`
+
+const Video = styled.video`
+  /* Make video to at least 100% wide and tall */
+  min-width: 100%;
+  min-height: 100%;
+
+  /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+  width: auto;
+  height: auto;
+
+  /* Center the video */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`
+
+const Overlay = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(12, 12, 14, 0.4);
+  will-change: opacity;
+  /* mix-blend-mode: overlay; */
+`
 
 const IntroPage = styled.section`
   min-height: 100%;
@@ -211,7 +254,7 @@ const IntroPage = styled.section`
   padding-left: 100px;
 
   @media (max-width: 550px) {
-    padding-top: 150px;
+    padding-top: 200px;
     padding-right: 16px;
     padding-left: 16px;
     padding-bottom: 200px;
@@ -248,11 +291,6 @@ const Subtitle = styled.span`
 
 const Paragraph = styled.p`
   padding-bottom: 35px;
-`
-const VideoPage = styled.section`
-  height: 40vh;
-  border: 4px dotted var(--red);
-  /* background: var(--red-31); */
 `
 
 const DayPage = styled.section`
