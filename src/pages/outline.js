@@ -271,6 +271,7 @@ const Title = styled.h1`
   font-weight: var(--medium);
   max-width: 550px;
   margin-left: -15px;
+  padding-bottom: 36px;
 
   @media (max-width: 550px) {
     line-height: 1;
@@ -279,18 +280,23 @@ const Title = styled.h1`
   }
 `
 const Subtitle = styled.span`
-  font-size: var(--text-h2-mobile);
+  font-size: var(--text-h2);
   line-height: 0.6;
   word-spacing: -0.2em;
   margin-left: 6px;
 
   @media (max-width: 550px) {
+    font-size: var(--text-h2-mobile);
+
     margin: 0px;
+    line-height: 0.6;
+    word-spacing: -0.2em;
+    margin-left: 6px;
   }
 `
 
 const Paragraph = styled.p`
-  padding-bottom: 35px;
+  /* padding-bottom: 35px; */
 `
 
 const DayPage = styled.section`
@@ -317,9 +323,9 @@ const DayPage = styled.section`
 `
 
 const DayWrapper = styled.section`
-  margin-top: 220px;
-  margin-left: 100px;
-  margin-right: 100px;
+  padding-top: 60px;
+  margin-left: 75px;
+  margin-right: 75px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

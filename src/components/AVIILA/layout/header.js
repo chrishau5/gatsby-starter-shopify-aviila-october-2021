@@ -100,7 +100,7 @@ const Wrapper = styled.div`
   justify-content: space-between;
   padding: 0 30px;
   align-items: center;
-  background-color: #0c0c0e;
+  background-color: hsla(240, 8%, 5%, 0.9);
 
   @media (max-width: 768px) {
     padding-top: 30px;
